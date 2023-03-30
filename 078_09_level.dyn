@@ -1,0 +1,358 @@
+{
+  "Uuid": "0935fb28-df55-4945-93e6-b945f6b43a5f",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "select_active_level",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DesignScript.Builtin.Dictionary.ByKeysValues@string[],var[]..[]",
+      "Id": "21ec0ab7ce4845b59b3f1e4fa5e38206",
+      "Inputs": [
+        {
+          "Id": "ec8ae3072a90490fb4ad7296790e9d8a",
+          "Name": "keys",
+          "Description": "Ключи строк словаря\n\nstring[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7cce75ab35f54c4d83d13f936ea876c5",
+          "Name": "values",
+          "Description": "Значения словаря\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f0b20936dece4525986a3279ebd38bb1",
+          "Name": "dictionary",
+          "Description": "Итоговый словарь",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Создание словаря с заданными ключами и значениями. Количество записей короче ключей или значений.\n\nDictionary.ByKeysValues (keys: string[], values: var[]..[]): Dictionary"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "[1,2,3];",
+      "Id": "351a05a5a801487a83367f6c7adb00d2",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3bee380e630e49858d62344708006560",
+          "Name": "",
+          "Description": "Значение выражения в строке 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Обеспечивает возможность непосредственного авторства кода DesignScript"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "[\"первый\", \"второй\", \"третий\"];",
+      "Id": "efec158021c643f3a15800fc529326f9",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "47de73f62f05465d8198065838ae003a",
+          "Name": "",
+          "Description": "Значение выражения в строке 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Обеспечивает возможность непосредственного авторства кода DesignScript"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DesignScript.Builtin.Dictionary.Keys",
+      "Id": "1d7e692dba1e4a83a71acc26f057f28d",
+      "Inputs": [
+        {
+          "Id": "f6ee9a36c6d14edf8943399a15be4183",
+          "Name": "dictionary",
+          "Description": "DesignScript.Builtin.Dictionary",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ffe1e56f17d74b9d92ac683a28595b47",
+          "Name": "keys",
+          "Description": "Ключи словаря",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Создание ключей словаря.\n\nDictionary.Keys: string[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DesignScript.Builtin.Dictionary.Values",
+      "Id": "7a66693ac8d34e42837b6d5c655f0694",
+      "Inputs": [
+        {
+          "Id": "71e4687c91f84a058d135037794cfe14",
+          "Name": "dictionary",
+          "Description": "DesignScript.Builtin.Dictionary",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5c1e245d9800487490285adac446c4be",
+          "Name": "values",
+          "Description": "Значения словаря",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Создание значений словаря.\n\nDictionary.Values: var[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "a + \": \" + b;",
+      "Id": "222fafd51bf04a24a94fc13e5ae43712",
+      "Inputs": [
+        {
+          "Id": "6f22a66ef1cd41c6b25d37c4dec5ac0e",
+          "Name": "a",
+          "Description": "a",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "35cd58990fd348dab4caa7841b23e13a",
+          "Name": "b",
+          "Description": "b",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "64947716e6334ed6bf99cbbbce50de7f",
+          "Name": "",
+          "Description": "Значение выражения в строке 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Обеспечивает возможность непосредственного авторства кода DesignScript"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "16aa3fb462924f3baeca6ff9126de8b7",
+      "Inputs": [
+        {
+          "Id": "8c12076a09574d6bbb8b18267b9c86e6",
+          "Name": "",
+          "Description": "Узел для оценки.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "479741a31d5941d4b72730224c937c88",
+          "Name": "",
+          "Description": "Просмотр содержимого.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Визуализация входного элемента узла."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "f0b20936dece4525986a3279ebd38bb1",
+      "End": "f6ee9a36c6d14edf8943399a15be4183",
+      "Id": "b6689c09c14c47f1ab00a1e97018ee1a"
+    },
+    {
+      "Start": "f0b20936dece4525986a3279ebd38bb1",
+      "End": "71e4687c91f84a058d135037794cfe14",
+      "Id": "7a4e20ce5c3d496d82a1f6ecddfc5aea"
+    },
+    {
+      "Start": "3bee380e630e49858d62344708006560",
+      "End": "7cce75ab35f54c4d83d13f936ea876c5",
+      "Id": "783a5529f009446f86c12fe6308b7964"
+    },
+    {
+      "Start": "47de73f62f05465d8198065838ae003a",
+      "End": "ec8ae3072a90490fb4ad7296790e9d8a",
+      "Id": "7bd9e9e4e95c4c9a82ccc0c9fefd50d5"
+    },
+    {
+      "Start": "ffe1e56f17d74b9d92ac683a28595b47",
+      "End": "6f22a66ef1cd41c6b25d37c4dec5ac0e",
+      "Id": "2d86a4cebf2c49589b4e8409acdea362"
+    },
+    {
+      "Start": "5c1e245d9800487490285adac446c4be",
+      "End": "35cd58990fd348dab4caa7841b23e13a",
+      "Id": "fd28381c1ecb4b46b68a52dafba362e5"
+    },
+    {
+      "Start": "64947716e6334ed6bf99cbbbce50de7f",
+      "End": "8c12076a09574d6bbb8b18267b9c86e6",
+      "Id": "f1f1fd10d39947d786bc7d7f678a5e77"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.10.1.3976",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Фоновый просмотр",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Dictionary.ByKeysValues",
+        "Id": "21ec0ab7ce4845b59b3f1e4fa5e38206",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 327.1234747709799,
+        "Y": 324.31143519432271
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "351a05a5a801487a83367f6c7adb00d2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 138.45696719797093,
+        "Y": 404.78242744724571
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "efec158021c643f3a15800fc529326f9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -25.880482413613322,
+        "Y": 194.4008211073922
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Dictionary.Keys",
+        "Id": "1d7e692dba1e4a83a71acc26f057f28d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 607.24336229529831,
+        "Y": 272.13410659348028
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Dictionary.Values",
+        "Id": "7a66693ac8d34e42837b6d5c655f0694",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 741.7007396868712,
+        "Y": 481.27492073034983
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "222fafd51bf04a24a94fc13e5ae43712",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1024.1498497938474,
+        "Y": 327.80600740025244
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "16aa3fb462924f3baeca6ff9126de8b7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1266.8124825027339,
+        "Y": 324.15691562792864
+      }
+    ],
+    "Annotations": [],
+    "X": -94.076201537732686,
+    "Y": -1.055095178939041,
+    "Zoom": 0.752278291023545
+  }
+}
