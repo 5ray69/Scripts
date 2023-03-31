@@ -18,9 +18,10 @@ class FromUserFormNameMagistral(object):
     def get_magistral(self):
         name_level_specifikacyi = self.doc.GetElement(self.equipment.Parameter[
             DB.BuiltInParameter.INSTANCE_SCHEDULE_ONLY_LEVEL_PARAM].AsElementId()).Name
-        if self.equipment.LookupParameter('BDV_E000_Номер стояка').AsInteger() == 1:
+        number_stoyak = self.equipment.LookupParameter('BDV_E000_Номер стояка').AsInteger()
+        if number_stoyak == 1:
             return self.dict_1[name_level_specifikacyi]
-        elif self.equipment.LookupParameter('BDV_E000_Номер стояка').AsInteger() == 2:
+        elif number_stoyak:
             return self.dict_2[name_level_specifikacyi]
         else:
             raise ErrorNumberStoyak(self.equipment, self.equipment.Id)
