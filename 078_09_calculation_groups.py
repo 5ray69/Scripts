@@ -42,7 +42,6 @@ with DB.Transaction(doc, 'create_family') as t:
     calculationGroups = CalculationGroups(doc, uidoc)
     dict_group_str_max_dU = calculationGroups.get_value_max_dU_from_path_with_max_dU()
 
-    # for group_str,max_dU in calculationGroups.get_value_max_dU_from_path_with_max_dU().items():
     for group_str in my_sort_group(dict_group_str_max_dU.keys()):
         # 1900 - смещение по Х
         valueX += DB.UnitUtils.ConvertToInternalUnits(1900, display_units)
